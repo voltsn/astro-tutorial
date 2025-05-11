@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props
 <BaseLayout pageTitle={frontmatter.title}>
   <p>Tags</p>
   <ul class="tags">
-    {frontmatter.tags.map(tag => <li class="tag">{tag}</li>)}
+    {frontmatter.tags.map((tag: string) => <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>)}
   </ul>
   <p>
     Written by
@@ -19,11 +19,12 @@ const { frontmatter } = Astro.props
     <img  src={frontmatter.image.url} alt={frontmatter.image.alt} width="500" src="500" />
   </div>
   <slot />
-  <style is:global>
+  <style>
   .tags {
     font-size: .8rem;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: .8em;
     padding: 0;
   }
@@ -34,6 +35,12 @@ const { frontmatter } = Astro.props
     padding: .5em .8em;
     text-transform: capitalize;
   }
+
+  .tag a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   img {
     width: 100%;
     height: auto;
