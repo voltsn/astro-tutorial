@@ -20,7 +20,29 @@ h1 {
   font-size: 2.5rem;
 }
 
+/* Dark Theme styles */
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a,
+.dark a,
+.dark a:active {
+  color: #fff;
+}
+
+.dark li {
+  color: #fff;
+}
+
 /* Nav Styles */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -65,6 +87,9 @@ h1 {
 }
 
 @media screen and (min-width: 636px) {
+  .main-nav {
+    align-items: unset;
+  }
   .nav-links {
     display: flex;
     gap: 1.5em;
