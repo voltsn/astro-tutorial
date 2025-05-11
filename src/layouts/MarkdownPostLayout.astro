@@ -9,10 +9,7 @@ const { frontmatter } = Astro.props
     {frontmatter.tags.map((tag: string) => <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>)}
   </ul>
   <p>
-    Written by
-    <span
-      style="text-decoration: underline; color: blue"
-    >{frontmatter.author}</span> published on:
+    Written by {frontmatter.author}</span> published on:
     {new Date(frontmatter.pubDate).toLocaleDateString()}
   </p>
   <div>

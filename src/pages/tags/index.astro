@@ -10,7 +10,7 @@ const tags =[...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat(
   </div>
 </BaseLayout>
 
-<style>
+<style is:global>
   a {
     color: #00539F;
   }
@@ -28,4 +28,8 @@ const tags =[...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat(
     font-size: 1.15em;
     background-color: #F8FCFD;
   }  
+
+  .dark .tag {
+    background-color: #042861;
+  }
 </style>

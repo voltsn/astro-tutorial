@@ -36,6 +36,10 @@ html.dark {
   color: #fff;
 }
 
+.dark .nav-links {
+  background-color: #40089c;
+}
+
 /* Nav Styles */
 .main-nav {
   display: flex;
@@ -96,6 +100,9 @@ html.dark {
     position: static;
     width: auto;
     background: none;
+  }
+  .dark .nav-links {
+    background-color: unset;
   }
 
   .nav-links a {
